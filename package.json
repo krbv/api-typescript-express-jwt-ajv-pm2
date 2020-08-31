@@ -1,0 +1,25 @@
+{
+  "name": "api-typescript-express-jwt-ajv-pm2",
+  "version": "1.0.0",
+  "description": "Typescript + Express + JWT + AJV + PM2 Cluster, Zero Downtime",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start:prod": "pm2 start src/index.ts -i 'max'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "ajv": "^6.12.4",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
