@@ -1,15 +1,15 @@
-import { IController, IRoute } from "../../interfaces/controller.interface";
-import { IJwtPayloadSign } from "../../interfaces/auth.interface";
+import { IController, IRoute } from "../../interfaces/controller.interface.js";
+import { IJwtPayloadSign } from "../../interfaces/auth.interface.js";
 
-import { sign } from "../../util/jwt";
+import { sign } from "../../util/jwt.js";
 
 import {
   KeyNotProvdedTokenError,
   KeyNotFoundTokenError,
-} from "../../errors/keyErrors";
+} from "../../errors/keyErrors.js";
 
-import apiKeys from "../../data/mockup/apiKeys";
-import { IGetTokenParams } from "../../interfaces/auth.interface";
+import apiKeys from "../../data/mockup/apiKeys.js";
+import { IGetTokenParams } from "../../interfaces/auth.interface.js";
 
 class AuthController implements IController {
   protected apiKeys = apiKeys;

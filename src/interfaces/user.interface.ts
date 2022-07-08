@@ -1,4 +1,4 @@
-import { IActionParams } from "./controller.interface";
+import { IActionParams } from "./controller.interface.js";
 
 export interface IUser {
   id: number;
@@ -6,14 +6,14 @@ export interface IUser {
 }
 
 export interface ICreateUserParams extends IActionParams {
-  body: { name: string };
+  body: { name: string; };
 }
 
 export interface IDeleteUserParams extends IActionParams {
-  params: { id: string };
+  params: { id: string; };
 }
 
 export interface IUpdateUserParams extends IActionParams {
-  params: { id: string };
-  body: { name: string };
+  params: { id: string; };
+  body: { name: string; };
 }

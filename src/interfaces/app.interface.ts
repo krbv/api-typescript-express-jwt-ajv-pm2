@@ -1,9 +1,9 @@
 import { Handler, Request } from "express";
-import { IController } from "./controller.interface";
-import { ICustomError } from "./customError.interface";
+import { IController } from "./controller.interface.js";
+import { ICustomError } from "./customError.interface.js";
 
 export interface IAppClassConstructor {
-  new (): IController;
+  new(): IController;
 }
 
 export interface ISentSuccess {
