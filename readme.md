@@ -51,7 +51,7 @@ There are three locations for middlewares, each location has its own area of res
 `src/index.ts`
 
 ```typescript
-middlewares: [bodyParser.json, bodyParser.urlencoded];
+middlewares: [express.json, express.urlencoded];
 ```
 
 <hr>

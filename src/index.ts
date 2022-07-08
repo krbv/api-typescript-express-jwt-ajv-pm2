@@ -1,14 +1,14 @@
-import bodyParser from "body-parser";
-import App from "./app";
-import AuthController from "./controllers/authController";
-import UsersController from "./controllers/usersController";
-import { KeyNotProvdedTokenError } from "./errors/keyErrors";
-import CustomError from "./errors/customError";
-import { PORT } from "./config";
+import express from "express";
+import App from "./app.js";
+import AuthController from "./controllers/authController/index.js";
+import UsersController from "./controllers/usersController/index.js";
+import { KeyNotProvdedTokenError } from "./errors/keyErrors.js";
+import CustomError from "./errors/customError.js";
+import { PORT } from "./config.js";
 
 const app = new App({
   controllers: [AuthController, UsersController],
-  middlewares: [bodyParser.json, bodyParser.urlencoded],
+  middlewares: [express.json, express.urlencoded],
   urlPrefix: "/api/v1",
 
   /* Logic for winston, graylog, pm2 */

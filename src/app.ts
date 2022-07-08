@@ -1,16 +1,16 @@
 import express, { Handler, Request, Response, NextFunction } from "express";
-import { IRoute } from "./interfaces/controller.interface";
-import { ICustomError } from "./interfaces/customError.interface";
+import { IRoute } from "./interfaces/controller.interface.js";
+import { ICustomError } from "./interfaces/customError.interface.js";
 import {
   IAppConstructor,
   IAppClassConstructor,
   ISendApiError,
   ISentError,
   ISentSuccess,
-} from "./interfaces/app.interface";
-import validatorMiddleware from "./middlewares/validatorMiddleware";
-import { NotImplementedError } from "./errors/generalErrors";
-import CustomError from "./errors/customError";
+} from "./interfaces/app.interface.js";
+import validatorMiddleware from "./middlewares/validatorMiddleware.js";
+import { NotImplementedError } from "./errors/generalErrors.js";
+import CustomError from "./errors/customError.js";
 
 class App {
   private app: express.Application;
@@ -72,7 +72,7 @@ class App {
             });
             this.sendData(data, req, res);
           } catch (error) {
-            this.sendError(error, req, res);
+            this.sendError(<Error>error, req, res);
           }
         }
       );

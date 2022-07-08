@@ -1,6 +1,6 @@
-import Ajv from "ajv";
+import { default as Ajv } from "ajv";
 import { Request, Response, NextFunction } from "express";
-import ValidationError from "../errors/validationErrors";
+import ValidationError from "../errors/validationErrors.js";
 
 const validatorMiddleware = (scheme: object) => (
   req: Request,

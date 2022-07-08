@@ -3,9 +3,9 @@ import {
   TokenNotProvdedTokenError,
   UidNotFoundTokenError,
   InvalidTokenError,
-} from "../errors/tokenErrors";
-import { verify } from "../util/jwt";
-import { IJwtPayloadVerify } from "../interfaces/auth.interface";
+} from "../errors/tokenErrors.js";
+import { verify } from "../util/jwt.js";
+import { IJwtPayloadVerify } from "../interfaces/auth.interface.js";
 
 const jwtGuardMiddleware = (
   req: Request,
