@@ -1,5 +1,5 @@
 import { Handler } from "express";
-import { IRequestState } from "./express.interface";
+import { IRequestState } from "./express.interface.js";
 
 export interface IActionParams {
   body: any;

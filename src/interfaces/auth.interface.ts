@@ -1,7 +1,7 @@
-import { IActionParams } from "./controller.interface";
+import { IActionParams } from "./controller.interface.js";
 
 export interface IGetTokenParams extends IActionParams {
-  headers: { authorization: string };
+  headers: { authorization: string; };
 }
 
 export interface IJwtPayloadSign {

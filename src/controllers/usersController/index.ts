@@ -1,16 +1,16 @@
-import usersMockup from "../../data/mockup/users";
-import jwtGuardMiddleware from "../../middlewares/jwtGuardMiddleware";
+import usersMockup from "../../data/mockup/users.js";
+import jwtGuardMiddleware from "../../middlewares/jwtGuardMiddleware.js";
 
-import { IController, IRoute } from "../../interfaces/controller.interface";
+import { IController, IRoute } from "../../interfaces/controller.interface.js";
 
-import { createUserSchema } from "../../schemas/userSchema";
-import { IUser } from "../../interfaces/user.interface";
-import { UserNotFoundError } from "../../errors/userErrors";
+import { createUserSchema } from "../../schemas/userSchema.js";
+import { IUser } from "../../interfaces/user.interface.js";
+import { UserNotFoundError } from "../../errors/userErrors.js";
 import {
   ICreateUserParams,
   IDeleteUserParams,
   IUpdateUserParams,
-} from "../../interfaces/user.interface";
+} from "../../interfaces/user.interface.js";
 
 class UsersController implements IController {
   private users: IUser[] = [];

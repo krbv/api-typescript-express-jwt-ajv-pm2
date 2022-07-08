@@ -1,7 +1,7 @@
 import {
   ICustomError,
   ICustomErrorConstructor,
-} from "../interfaces/customError.interface";
+} from "../interfaces/customError.interface.js";
 
 export default class CustomError extends Error implements ICustomError {
   public statusCode = 500;
